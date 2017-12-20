@@ -25,7 +25,7 @@
     #set( $key = $util.urlDecode($param[0]) )
 
     #if( $param.size() > 1 )
-      #set( $value = $util.urlDecode($param[1]) )
+      #set( $value = $util.escapeJavaScript($util.urlDecode($param[1])).replaceAll("\\'", "'") )
     #else
       #set( $value = "" )
     #end
