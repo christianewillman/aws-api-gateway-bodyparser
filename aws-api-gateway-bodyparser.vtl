@@ -24,7 +24,7 @@
   #foreach( $param in $params )
     #set( $key = $util.urlDecode($param[0]) )
 
-    #if( $param.size() > 1 )
+    #if( $param.size() > 1 && $param[1].length() > 0 )
       #set( $value = $util.urlDecode($param[1]) )
     #else
       #set( $value = "" )
